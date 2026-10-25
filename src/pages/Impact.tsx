@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/constants/motion";
-import { Counter } from "@/components/Counter";
+import { Counter } from "@/components/sections/Counter";
 import { CitationsChart } from "@/components/charts/CitationsChart";
 import { PublicationMixChart } from "@/components/charts/PublicationMixChart";
 import { DomainsChart } from "@/components/charts/DomainsChart";
-import { TopPapersList } from "@/components/TopPapersList";
+import { TopPapersList } from "@/components/sections/TopPapersList";
 import { collaborators, profile, stats } from "@/data/site";
 
 const Impact = () => (

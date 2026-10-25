@@ -49,7 +49,7 @@ const Publications = () => {
       <div className="mt-10 flex flex-wrap gap-3">
         <a href={profile.scholar} target="_blank" rel="noopener noreferrer" className="px-5 py-3 bg-blue-deep text-white rounded-lg hover:bg-blue">View Google Scholar →</a>
         <a href={profile.researchgate} target="_blank" rel="noopener noreferrer" className="px-5 py-3 bg-blue-deep text-white rounded-lg hover:bg-blue">View ResearchGate →</a>
-        <a href="/Sunil_Kumar_Dhal.pdf" target="_blank" rel="noopener noreferrer" className="px-5 py-3 border border-blue-deep text-blue-deep rounded-lg hover:bg-blue-tint">Download publication list (PDF) →</a>
+        <a href="/documents/sunil-kumar-dhal-cv.pdf" target="_blank" rel="noopener noreferrer" className="px-5 py-3 border border-blue-deep text-blue-deep rounded-lg hover:bg-blue-tint">Download publication list (PDF) →</a>
       </div>
     </section>
   );

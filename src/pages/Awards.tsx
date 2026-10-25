@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Award } from "lucide-react";
 import { fadeUp } from "@/constants/motion";
-import { TimelineTextBlock } from "@/components/TimelinePanel";
+import { TimelineTextBlock } from "@/components/sections/TimelinePanel";
 import { awards } from "@/data/site";
 
 const years = Array.from({ length: 9 }, (_, i) => 2010 + i);

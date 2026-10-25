@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "@/constants/motion";
-import { TimelineTextBlock } from "@/components/TimelinePanel";
+import { TimelineTextBlock } from "@/components/sections/TimelinePanel";
 
 const stats = [
   { n: 1971, l: "BORN" },
@@ -41,7 +41,7 @@ const About = () => (
       </TimelineTextBlock>
     </div>
     <div className="container-site pb-20">
-      <a href="/Sunil_Kumar_Dhal.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-deep hover:underline">Download full CV (PDF) →</a>
+      <a href="/documents/sunil-kumar-dhal-cv.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-deep hover:underline">Download full CV (PDF) →</a>
     </div>
   </>
 );

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/constants/motion";
-import { TimelineTextBlock } from "@/components/TimelinePanel";
+import { TimelineTextBlock } from "@/components/sections/TimelinePanel";
 import { consultancy } from "@/data/site";
 
 // 2011 -> 0, 2014 -> 36 months

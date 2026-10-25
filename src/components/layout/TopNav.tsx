@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/assets/sunil-logo.png";
+import logo from "@/assets/sunil-logo.webp";
 
 const navGroups = [
   {

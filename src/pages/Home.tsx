@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Counter } from "@/components/Counter";
+import { Counter } from "@/components/sections/Counter";
 import { CitationsChart } from "@/components/charts/CitationsChart";
 import { PublicationMixChart } from "@/components/charts/PublicationMixChart";
 import { DomainsChart } from "@/components/charts/DomainsChart";
-import { TopPapersList } from "@/components/TopPapersList";
+import { TopPapersList } from "@/components/sections/TopPapersList";
 import { fadeUp } from "@/constants/motion";
 import { profile, stats } from "@/data/site";
-import portrait from "@/assets/sunil-portrait.png";
+import portrait from "@/assets/sunil-portrait.webp";
 
 const Home = () => {
   return (
