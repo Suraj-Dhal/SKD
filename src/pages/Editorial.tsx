@@ -8,7 +8,10 @@ const Editorial = () => (
     <h1 className="mt-3 text-4xl md:text-6xl font-bold">Four journals, two continents of indexing.</h1>
 
     <div className="mt-8 card-hairline bg-surface border-l-4 border-l-blue-deep p-5 max-w-3xl">
-      <p className="text-sm text-text-muted">Two of these journals are published by IGI Global, an internationally indexed academic publisher with peer-reviewed titles in computing and management.</p>
+      <p className="text-sm text-text-muted">
+        Two of these journals are published by IGI Global, an internationally indexed academic publisher with
+        peer-reviewed titles in computing and management.
+      </p>
     </div>
 
     <div className="mt-12 space-y-12">
@@ -25,9 +28,18 @@ const Editorial = () => (
             <div className="eyebrow">{`Journal 0${i + 1}`}</div>
             <h2 className="mt-3 text-2xl md:text-3xl font-semibold">{j.name}</h2>
             <dl className="mt-5 grid grid-cols-3 gap-4 text-sm">
-              <div><dt className="eyebrow">Publisher</dt><dd className="mt-1 text-text">{j.publisher}</dd></div>
-              <div><dt className="eyebrow">ISSN</dt><dd className="mt-1 font-mono-num text-text">{j.issn}</dd></div>
-              <div><dt className="eyebrow">Domain</dt><dd className="mt-1 text-text">{j.domain}</dd></div>
+              <div>
+                <dt className="eyebrow">Publisher</dt>
+                <dd className="mt-1 text-text">{j.publisher}</dd>
+              </div>
+              <div>
+                <dt className="eyebrow">ISSN</dt>
+                <dd className="mt-1 font-mono-num text-text">{j.issn}</dd>
+              </div>
+              <div>
+                <dt className="eyebrow">Domain</dt>
+                <dd className="mt-1 text-text">{j.domain}</dd>
+              </div>
             </dl>
           </div>
         </motion.div>

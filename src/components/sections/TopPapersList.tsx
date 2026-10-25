@@ -12,10 +12,18 @@ export const TopPapersList = ({ count = 5 }: { count?: number }) => (
         <div className="col-span-12 md:col-span-9 -mt-1">
           <h4 className="font-semibold text-text leading-snug">{p.title}</h4>
           <div className="mt-2 h-1 bg-surface rounded overflow-hidden">
-            <motion.div initial={{ width: 0 }} whileInView={{ width: `${(p.citations / max) * 100}%` }} viewport={{ once: true }} transition={{ duration: 1, delay: i * 0.08 }} className="h-full bg-blue" />
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: `${(p.citations / max) * 100}%` }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: i * 0.08 }}
+              className="h-full bg-blue"
+            />
           </div>
           <div className="mt-2 text-sm italic text-text-muted">{p.venue}</div>
-          <span className="inline-block mt-3 text-[10px] font-mono-num uppercase tracking-wider px-2 py-1 bg-blue-tint text-blue-deep rounded">{p.tag}</span>
+          <span className="inline-block mt-3 text-[10px] font-mono-num uppercase tracking-wider px-2 py-1 bg-blue-tint text-blue-deep rounded">
+            {p.tag}
+          </span>
         </div>
         <div className="col-span-12 md:col-span-2 md:text-right font-mono-num text-text">
           <div>{p.year}</div>

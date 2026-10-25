@@ -29,12 +29,16 @@ export const TimelinePanel = ({
   className = "",
   compact = false,
 }: TimelinePanelProps) => (
-  <div className={`relative rounded-xl border border-hairline bg-surface overflow-hidden ${compact ? "p-5" : "p-6 md:p-8"} ${className}`}>
+  <div
+    className={`relative rounded-xl border border-hairline bg-surface overflow-hidden ${compact ? "p-5" : "p-6 md:p-8"} ${className}`}
+  >
     <div className="absolute left-0 top-0 h-full w-1 bg-blue-deep" aria-hidden="true" />
     <div className="flex items-start justify-between gap-4">
       <div>
         <div className="eyebrow">{kicker}</div>
-        <div className={`${compact ? "mt-2 text-xl" : "mt-3 text-2xl md:text-3xl"} font-semibold text-text leading-tight`}>
+        <div
+          className={`${compact ? "mt-2 text-xl" : "mt-3 text-2xl md:text-3xl"} font-semibold text-text leading-tight`}
+        >
           {title}
         </div>
       </div>
@@ -51,7 +55,10 @@ export const TimelinePanel = ({
             {index < items.length - 1 && (
               <div className="absolute left-[5px] top-5 h-[calc(100%+20px)] w-px bg-hairline" aria-hidden="true" />
             )}
-            <div className="absolute left-0 top-1.5 h-3 w-3 rounded-full border-2 border-blue-deep bg-surface" aria-hidden="true" />
+            <div
+              className="absolute left-0 top-1.5 h-3 w-3 rounded-full border-2 border-blue-deep bg-surface"
+              aria-hidden="true"
+            />
             <div className="text-sm font-semibold text-text">{item.label}</div>
             {item.detail && <div className="mt-1 text-sm leading-relaxed text-text-muted">{item.detail}</div>}
           </div>
@@ -94,7 +101,8 @@ export const TimelineTextBlock = ({
     <motion.div {...fadeUp} className="md:col-span-6 md:col-start-7 md:[&]:col-start-auto">
       <div className="eyebrow">{eyebrow}</div>
       <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-text leading-tight flex items-center gap-3">
-        {heading}{accent}
+        {heading}
+        {accent}
       </h2>
       <div className="mt-5 space-y-4 text-text-muted leading-relaxed">{children}</div>
     </motion.div>

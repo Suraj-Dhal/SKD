@@ -21,17 +21,127 @@ type SpeakingLocation = {
 };
 
 const locations: SpeakingLocation[] = [
-  { name: "Bhubaneswar", region: "Odisha", country: "India", lat: 20.2961, lng: 85.8245, category: "training", detail: "Government, postal, NCTE, OCAC, and UGC training sessions.", labelDx: 18, labelDy: -72 },
-  { name: "Cuttack", region: "Odisha", country: "India", lat: 20.4625, lng: 85.883, category: "visiting", detail: "Sri Sri University and regional academic leadership roles.", labelDx: 34, labelDy: -32 },
-  { name: "Talcher", region: "Odisha", country: "India", lat: 20.95, lng: 85.23, category: "training", detail: "Management information processes and quantitative techniques at TTPS Talcher.", labelDx: -246, labelDy: -52 },
-  { name: "Kaniha", region: "Odisha", country: "India", lat: 21.1, lng: 85.1, category: "training", detail: "Junior and senior management training at NTPC Kaniha.", labelDx: -236, labelDy: 2 },
-  { name: "Sambalpur", region: "Odisha", country: "India", lat: 21.4669, lng: 83.9812, category: "training", detail: "Mid-Day Meal program assessment and education quality field work.", labelDx: -252, labelDy: -92 },
-  { name: "Dhenkanal", region: "Odisha", country: "India", lat: 20.6574, lng: 85.5969, category: "training", detail: "NCTE master training for B.Ed principals and headmasters.", labelDx: 34, labelDy: 18 },
-  { name: "Ghaziabad", region: "Uttar Pradesh", country: "India", lat: 28.6692, lng: 77.4538, category: "training", detail: "IMT Ghaziabad-organized management training programs.", labelDx: 16, labelDy: -60 },
-  { name: "Kharagpur", region: "West Bengal", country: "India", lat: 22.346, lng: 87.232, category: "conference", detail: "Technical sessions and academic conference participation.", labelDx: 22, labelDy: -40 },
-  { name: "Kathmandu", region: "Bagmati", country: "Nepal", lat: 27.7172, lng: 85.324, category: "visiting", detail: "Nepal Institute of Engineering and Technology and Kothak Engineering College.", labelDx: 18, labelDy: -58 },
-  { name: "Srikakulam", region: "Andhra Pradesh", country: "India", lat: 18.2949, lng: 83.8938, category: "conference", detail: "Keynote speaker at Big Data and Hadoop conference, GMRIT.", labelDx: 20, labelDy: -40 },
-  { name: "Visakhapatnam", region: "Andhra Pradesh", country: "India", lat: 17.6868, lng: 83.2185, category: "conference", detail: "Conference and academic speaking corridor in coastal Andhra Pradesh.", labelDx: 24, labelDy: 12 },
+  {
+    name: "Bhubaneswar",
+    region: "Odisha",
+    country: "India",
+    lat: 20.2961,
+    lng: 85.8245,
+    category: "training",
+    detail: "Government, postal, NCTE, OCAC, and UGC training sessions.",
+    labelDx: 18,
+    labelDy: -72,
+  },
+  {
+    name: "Cuttack",
+    region: "Odisha",
+    country: "India",
+    lat: 20.4625,
+    lng: 85.883,
+    category: "visiting",
+    detail: "Sri Sri University and regional academic leadership roles.",
+    labelDx: 34,
+    labelDy: -32,
+  },
+  {
+    name: "Talcher",
+    region: "Odisha",
+    country: "India",
+    lat: 20.95,
+    lng: 85.23,
+    category: "training",
+    detail: "Management information processes and quantitative techniques at TTPS Talcher.",
+    labelDx: -246,
+    labelDy: -52,
+  },
+  {
+    name: "Kaniha",
+    region: "Odisha",
+    country: "India",
+    lat: 21.1,
+    lng: 85.1,
+    category: "training",
+    detail: "Junior and senior management training at NTPC Kaniha.",
+    labelDx: -236,
+    labelDy: 2,
+  },
+  {
+    name: "Sambalpur",
+    region: "Odisha",
+    country: "India",
+    lat: 21.4669,
+    lng: 83.9812,
+    category: "training",
+    detail: "Mid-Day Meal program assessment and education quality field work.",
+    labelDx: -252,
+    labelDy: -92,
+  },
+  {
+    name: "Dhenkanal",
+    region: "Odisha",
+    country: "India",
+    lat: 20.6574,
+    lng: 85.5969,
+    category: "training",
+    detail: "NCTE master training for B.Ed principals and headmasters.",
+    labelDx: 34,
+    labelDy: 18,
+  },
+  {
+    name: "Ghaziabad",
+    region: "Uttar Pradesh",
+    country: "India",
+    lat: 28.6692,
+    lng: 77.4538,
+    category: "training",
+    detail: "IMT Ghaziabad-organized management training programs.",
+    labelDx: 16,
+    labelDy: -60,
+  },
+  {
+    name: "Kharagpur",
+    region: "West Bengal",
+    country: "India",
+    lat: 22.346,
+    lng: 87.232,
+    category: "conference",
+    detail: "Technical sessions and academic conference participation.",
+    labelDx: 22,
+    labelDy: -40,
+  },
+  {
+    name: "Kathmandu",
+    region: "Bagmati",
+    country: "Nepal",
+    lat: 27.7172,
+    lng: 85.324,
+    category: "visiting",
+    detail: "Nepal Institute of Engineering and Technology and Kothak Engineering College.",
+    labelDx: 18,
+    labelDy: -58,
+  },
+  {
+    name: "Srikakulam",
+    region: "Andhra Pradesh",
+    country: "India",
+    lat: 18.2949,
+    lng: 83.8938,
+    category: "conference",
+    detail: "Keynote speaker at Big Data and Hadoop conference, GMRIT.",
+    labelDx: 20,
+    labelDy: -40,
+  },
+  {
+    name: "Visakhapatnam",
+    region: "Andhra Pradesh",
+    country: "India",
+    lat: 17.6868,
+    lng: 83.2185,
+    category: "conference",
+    detail: "Conference and academic speaking corridor in coastal Andhra Pradesh.",
+    labelDx: 24,
+    labelDy: 12,
+  },
 ];
 
 const categoryStyles = {
@@ -94,7 +204,13 @@ const SpeakingMap = () => {
       type: "FeatureCollection",
       features: [...subcontinentFeatures.filter((d) => d.properties.name !== "India"), ...india.features],
     };
-    const projection = geoMercator().fitExtent([[64, 54], [916, 620]], focusFeatureCollection);
+    const projection = geoMercator().fitExtent(
+      [
+        [64, 54],
+        [916, 620],
+      ],
+      focusFeatureCollection,
+    );
     const path = geoPath(projection);
     const pointsToPath = (points: Array<[number, number]>) =>
       points
@@ -134,7 +250,9 @@ const SpeakingMap = () => {
       <div className="flex flex-col gap-4 border-b border-hairline bg-card px-5 py-4 md:flex-row md:items-center md:justify-between">
         <div>
           <div className="eyebrow">INDIAN SUBCONTINENT</div>
-          <p className="mt-2 text-sm text-text-muted">Talks, training programs, and visiting faculty roles across India and Nepal.</p>
+          <p className="mt-2 text-sm text-text-muted">
+            Talks, training programs, and visiting faculty roles across India and Nepal.
+          </p>
         </div>
         <div className="flex flex-wrap gap-3">
           {Object.entries(categoryStyles).map(([key, style]) => (
@@ -163,7 +281,16 @@ const SpeakingMap = () => {
         </defs>
 
         <rect width={width} height={height} fill="hsl(197 82% 86%)" />
-        <rect x="1" y="1" width={width - 2} height={height - 2} fill="none" stroke="hsl(218 18% 26%)" strokeWidth="1" opacity="0.3" />
+        <rect
+          x="1"
+          y="1"
+          width={width - 2}
+          height={height - 2}
+          fill="none"
+          stroke="hsl(218 18% 26%)"
+          strokeWidth="1"
+          opacity="0.3"
+        />
 
         {countryPaths.map((country) => {
           if (country.name === "India") return null;
@@ -180,13 +307,7 @@ const SpeakingMap = () => {
         })}
 
         {statePaths.map((state) => (
-          <path
-            key={`${state.name}-fill`}
-            d={state.d}
-            fill="hsl(56 92% 94%)"
-            fillRule="evenodd"
-            stroke="none"
-          />
+          <path key={`${state.name}-fill`} d={state.d} fill="hsl(56 92% 94%)" fillRule="evenodd" stroke="none" />
         ))}
 
         <path
@@ -273,15 +394,35 @@ const SpeakingMap = () => {
               }}
             >
               <circle cx={point.x} cy={point.y} r="12" fill={style.fill} opacity="0.14">
-                <animate attributeName="r" values="12;22;12" dur="2.8s" repeatCount="indefinite" begin={`${index * 0.18}s`} />
-                <animate attributeName="opacity" values="0.22;0.04;0.22" dur="2.8s" repeatCount="indefinite" begin={`${index * 0.18}s`} />
+                <animate
+                  attributeName="r"
+                  values="12;22;12"
+                  dur="2.8s"
+                  repeatCount="indefinite"
+                  begin={`${index * 0.18}s`}
+                />
+                <animate
+                  attributeName="opacity"
+                  values="0.22;0.04;0.22"
+                  dur="2.8s"
+                  repeatCount="indefinite"
+                  begin={`${index * 0.18}s`}
+                />
               </circle>
               <circle cx={point.x} cy={point.y} r="8.5" fill={style.fill} filter="url(#pinGlow)" />
               <circle cx={point.x} cy={point.y} r="4" fill="white" opacity="0.94" />
               <circle cx={point.x} cy={point.y} r="8.5" fill="none" stroke="white" strokeWidth="1.5" opacity="0.9" />
 
-              <g className={`transition-opacity duration-150 ${isActive ? "opacity-100" : "opacity-0"}`} pointerEvents="none">
-                <path d={`M${point.x} ${point.y - 1} L${popupX + 12} ${popupY + 56}`} stroke={style.fill} strokeWidth="1" opacity="0.5" />
+              <g
+                className={`transition-opacity duration-150 ${isActive ? "opacity-100" : "opacity-0"}`}
+                pointerEvents="none"
+              >
+                <path
+                  d={`M${point.x} ${point.y - 1} L${popupX + 12} ${popupY + 56}`}
+                  stroke={style.fill}
+                  strokeWidth="1"
+                  opacity="0.5"
+                />
                 <rect
                   x={popupX}
                   y={popupY}
@@ -293,10 +434,23 @@ const SpeakingMap = () => {
                   strokeWidth="1"
                   filter="url(#pinGlow)"
                 />
-                <text x={popupX + 12} y={popupY + 22} fontFamily="Manrope, sans-serif" fontSize="15" fontWeight="700" fill="hsl(var(--text))">
+                <text
+                  x={popupX + 12}
+                  y={popupY + 22}
+                  fontFamily="Manrope, sans-serif"
+                  fontSize="15"
+                  fontWeight="700"
+                  fill="hsl(var(--text))"
+                >
                   {point.name}
                 </text>
-                <text x={popupX + 12} y={popupY + 39} fontFamily="JetBrains Mono, monospace" fontSize="10" fill="hsl(var(--text-faint))">
+                <text
+                  x={popupX + 12}
+                  y={popupY + 39}
+                  fontFamily="JetBrains Mono, monospace"
+                  fontSize="10"
+                  fill="hsl(var(--text-faint))"
+                >
                   {point.region}, {point.country} · {categoryStyles[point.category].label}
                 </text>
                 <foreignObject x={popupX + 12} y={popupY + 47} width="200" height="34">
@@ -321,29 +475,88 @@ type DataColumn = {
 
 const trainingPrograms: DataRow[] = [
   { period: "2026", program: "Six-day training program for startups", audience: "IIT Bhubaneswar" },
-  { period: "2024", program: "Six-day program on Data-Driven Decision-Making", audience: "Government of Odisha MSME startups" },
-  { period: "2008", program: "Training on E-commerce", audience: "Junior and senior staff, Indian Postal Department, Bhubaneswar" },
-  { period: "2004-2007", program: "Management Information Processes, Optimization, and Quantitative Techniques", audience: "Junior and senior management, NTPC Kaniha and TTPS Talcher; organized by IMT Ghaziabad" },
-  { period: "Not specified", program: "Computer Awareness Program", audience: "Telecommunication Department, Bhubaneswar; organized by SOFTCON" },
-  { period: "Not specified", program: "Master Trainer Program", audience: "National Council for Teacher Education, training B.Ed college principals and headmasters across Bhubaneswar and Dhenkanal" },
-  { period: "Not specified", program: "Project Implementation, Monitoring, and Evaluation", audience: "Senior and middle-level officers at OCAC, Bhubaneswar" },
+  {
+    period: "2024",
+    program: "Six-day program on Data-Driven Decision-Making",
+    audience: "Government of Odisha MSME startups",
+  },
+  {
+    period: "2008",
+    program: "Training on E-commerce",
+    audience: "Junior and senior staff, Indian Postal Department, Bhubaneswar",
+  },
+  {
+    period: "2004-2007",
+    program: "Management Information Processes, Optimization, and Quantitative Techniques",
+    audience: "Junior and senior management, NTPC Kaniha and TTPS Talcher; organized by IMT Ghaziabad",
+  },
+  {
+    period: "Not specified",
+    program: "Computer Awareness Program",
+    audience: "Telecommunication Department, Bhubaneswar; organized by SOFTCON",
+  },
+  {
+    period: "Not specified",
+    program: "Master Trainer Program",
+    audience:
+      "National Council for Teacher Education, training B.Ed college principals and headmasters across Bhubaneswar and Dhenkanal",
+  },
+  {
+    period: "Not specified",
+    program: "Project Implementation, Monitoring, and Evaluation",
+    audience: "Senior and middle-level officers at OCAC, Bhubaneswar",
+  },
 ];
 
 const ugcCourses: DataRow[] = [
-  { period: "December 2005", role: "Resource Person", theme: "IT Literacy, Social Science, Social Policy, and Development of Weaker Sections", institution: "NISWASS, Bhubaneswar" },
-  { period: "February-March 2014", role: "Resource Person", theme: "Teaching and Learning Challenges of the 21st Century", institution: "Utkal University" },
+  {
+    period: "December 2005",
+    role: "Resource Person",
+    theme: "IT Literacy, Social Science, Social Policy, and Development of Weaker Sections",
+    institution: "NISWASS, Bhubaneswar",
+  },
+  {
+    period: "February-March 2014",
+    role: "Resource Person",
+    theme: "Teaching and Learning Challenges of the 21st Century",
+    institution: "Utkal University",
+  },
 ];
 
 const visitingFaculty: DataRow[] = [
   { institution: "Utkal University", area: "MBA, MCA, M.Tech", period: "2001-2009, 2014, 2019" },
   { institution: "GMRIT University", area: "Management / Technical Programs", period: "2008-2009" },
   { institution: "Centurion University", area: "Academic Programs", period: "2020-2021" },
-  { institution: "Nepal Institute of Engineering and Technology", area: "Engineering / Management Programs", period: "2004-2006, 2012-2014" },
-  { institution: "Kothak Engineering College, Kathmandu", area: "Engineering / Management Programs", period: "2013-2014" },
-  { institution: "Indian Institute of Tourism Management, Bhubaneswar", area: "Tourism and Management", period: "2006-2008" },
-  { institution: "Gopabandhu Academy, Government of Odisha", area: "Training for OAS and IAS officers", period: "2006-2007" },
-  { institution: "Madhusudan Institute of Co-operative Management, Bhubaneswar", area: "Management Programs", period: "2000-2007" },
-  { institution: "Orissa University of Agriculture and Technology, Bhubaneswar", area: "Academic Programs", period: "2011-2013, 2015-2018" },
+  {
+    institution: "Nepal Institute of Engineering and Technology",
+    area: "Engineering / Management Programs",
+    period: "2004-2006, 2012-2014",
+  },
+  {
+    institution: "Kothak Engineering College, Kathmandu",
+    area: "Engineering / Management Programs",
+    period: "2013-2014",
+  },
+  {
+    institution: "Indian Institute of Tourism Management, Bhubaneswar",
+    area: "Tourism and Management",
+    period: "2006-2008",
+  },
+  {
+    institution: "Gopabandhu Academy, Government of Odisha",
+    area: "Training for OAS and IAS officers",
+    period: "2006-2007",
+  },
+  {
+    institution: "Madhusudan Institute of Co-operative Management, Bhubaneswar",
+    area: "Management Programs",
+    period: "2000-2007",
+  },
+  {
+    institution: "Orissa University of Agriculture and Technology, Bhubaneswar",
+    area: "Academic Programs",
+    period: "2011-2013, 2015-2018",
+  },
 ];
 
 const keynoteEvents: DataRow[] = [
@@ -381,7 +594,10 @@ const DataTable = ({ columns, rows }: { columns: DataColumn[]; rows: DataRow[] }
       <thead>
         <tr className="border-b border-hairline bg-surface">
           {columns.map((column) => (
-            <th key={column.key} className={`px-4 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-text-faint ${column.className ?? ""}`}>
+            <th
+              key={column.key}
+              className={`px-4 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-text-faint ${column.className ?? ""}`}
+            >
               {column.label}
             </th>
           ))}
@@ -391,7 +607,10 @@ const DataTable = ({ columns, rows }: { columns: DataColumn[]; rows: DataRow[] }
         {rows.map((row, index) => (
           <tr key={`${row[columns[0].key]}-${index}`} className="border-b border-hairline last:border-b-0">
             {columns.map((column) => (
-              <td key={column.key} className={`px-4 py-4 align-top leading-relaxed text-text-muted ${column.className ?? ""}`}>
+              <td
+                key={column.key}
+                className={`px-4 py-4 align-top leading-relaxed text-text-muted ${column.className ?? ""}`}
+              >
                 {row[column.key]}
               </td>
             ))}
@@ -430,9 +649,12 @@ const Speaking = () => (
 
     <motion.div {...fadeUp} className="mt-14 max-w-4xl">
       <div className="eyebrow">ACADEMIC ENGAGEMENTS, TRAINING & CAPACITY BUILDING</div>
-      <h2 className="mt-3 text-3xl font-bold text-text md:text-4xl">A clearer view of the academic engagement timeline.</h2>
+      <h2 className="mt-3 text-3xl font-bold text-text md:text-4xl">
+        A clearer view of the academic engagement timeline.
+      </h2>
       <p className="mt-4 leading-relaxed text-text-muted">
-        The engagements below are organized by program type, institution, audience, and year so the speaking and training record is easier to scan, compare, and verify.
+        The engagements below are organized by program type, institution, audience, and year so the speaking and
+        training record is easier to scan, compare, and verify.
       </p>
     </motion.div>
 
@@ -502,7 +724,10 @@ const Speaking = () => (
           <p className="mt-2 font-semibold text-text">Technical sessions chaired</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {conferenceDomains.map((domain) => (
-              <span key={domain} className="rounded-full border border-hairline bg-card px-3 py-1 text-xs text-text-muted">
+              <span
+                key={domain}
+                className="rounded-full border border-hairline bg-card px-3 py-1 text-xs text-text-muted"
+              >
                 {domain}
               </span>
             ))}

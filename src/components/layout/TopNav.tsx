@@ -96,7 +96,11 @@ export const TopNav = () => {
                   }}
                   className={`flex items-center gap-1 text-sm transition-colors ${isActive ? "text-blue-deep font-medium" : "text-text-muted hover:text-blue-deep"}`}
                 >
-                  {group.label} <ChevronDown size={14} className={`transition-transform ${activeMenu === group.label ? "rotate-180" : ""}`} />
+                  {group.label}{" "}
+                  <ChevronDown
+                    size={14}
+                    className={`transition-transform ${activeMenu === group.label ? "rotate-180" : ""}`}
+                  />
                 </button>
                 <AnimatePresence>
                   {activeMenu === group.label && (
@@ -147,13 +151,17 @@ export const TopNav = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-50 bg-background md:hidden"
           >
             <div className="container-site flex items-center justify-between h-[72px] border-b border-hairline">
               <span className="font-semibold text-sm">Sunil K. Dhal</span>
-              <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2"><X size={22} /></button>
+              <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2">
+                <X size={22} />
+              </button>
             </div>
             <nav className="container-site flex flex-col gap-3 py-8">
               {navGroups.map((group) => {

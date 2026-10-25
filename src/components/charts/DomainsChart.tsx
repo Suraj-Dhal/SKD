@@ -1,13 +1,20 @@
 import { motion } from "framer-motion";
 import { profile, researchDomains } from "@/data/site";
 
-const max = Math.max(...researchDomains.map(d => d.v));
+const max = Math.max(...researchDomains.map((d) => d.v));
 
 export const DomainsChart = () => (
   <div className="card-hairline bg-card p-6 md:p-8">
     <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
       <h3 className="font-semibold text-lg text-text">Research domains, by publication count</h3>
-      <a href={profile.researchgate} target="_blank" rel="noopener noreferrer" className="text-[11px] font-mono-num text-text-faint uppercase tracking-wider hover:text-blue-deep hover:underline">Source: ResearchGate</a>
+      <a
+        href={profile.researchgate}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[11px] font-mono-num text-text-faint uppercase tracking-wider hover:text-blue-deep hover:underline"
+      >
+        Source: ResearchGate
+      </a>
     </div>
     <div className="space-y-3" aria-label="Horizontal bar chart of research domains by publication count">
       {researchDomains.map((d, i) => {

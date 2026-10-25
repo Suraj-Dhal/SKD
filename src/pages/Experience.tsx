@@ -11,15 +11,24 @@ const phaseForRange = (range: string) => {
 };
 
 const detailForRole = (role: string) => {
-  if (role.includes("Program Head")) return "Leads MBA program direction, academic coordination, student experience, and management education delivery.";
-  if (role.includes("Research Development")) return "Strengthened research systems, faculty research coordination, publication culture, and institutional research processes.";
-  if (role === "Professor") return "Continues teaching, doctoral supervision, research publication, consulting, and cross-disciplinary academic leadership.";
-  if (role.includes("Faculty of Commerce")) return "Guided faculty-level academic planning, curriculum delivery, departmental coordination, and management studies growth.";
-  if (role.includes("Quality Assurance")) return "Directed academic quality processes, documentation, internal review systems, and institutional quality initiatives.";
-  if (role.includes("Head")) return "Led department administration, course planning, faculty coordination, and student academic progress.";
-  if (role.includes("Associate Dean")) return "Supported MCA academic administration, program coordination, and departmental operations.";
-  if (role.includes("Associate Professor")) return "Handled teaching, academic mentoring, department-level responsibilities, and institutional development work.";
-  if (role.includes("Asst. Professor")) return "Built early academic foundations through teaching, student mentoring, and computing curriculum delivery.";
+  if (role.includes("Program Head"))
+    return "Leads MBA program direction, academic coordination, student experience, and management education delivery.";
+  if (role.includes("Research Development"))
+    return "Strengthened research systems, faculty research coordination, publication culture, and institutional research processes.";
+  if (role === "Professor")
+    return "Continues teaching, doctoral supervision, research publication, consulting, and cross-disciplinary academic leadership.";
+  if (role.includes("Faculty of Commerce"))
+    return "Guided faculty-level academic planning, curriculum delivery, departmental coordination, and management studies growth.";
+  if (role.includes("Quality Assurance"))
+    return "Directed academic quality processes, documentation, internal review systems, and institutional quality initiatives.";
+  if (role.includes("Head"))
+    return "Led department administration, course planning, faculty coordination, and student academic progress.";
+  if (role.includes("Associate Dean"))
+    return "Supported MCA academic administration, program coordination, and departmental operations.";
+  if (role.includes("Associate Professor"))
+    return "Handled teaching, academic mentoring, department-level responsibilities, and institutional development work.";
+  if (role.includes("Asst. Professor"))
+    return "Built early academic foundations through teaching, student mentoring, and computing curriculum delivery.";
   return "Delivered computing education, practical training, and early career academic instruction.";
 };
 
@@ -29,7 +38,8 @@ const Experience = () => (
       <div className="eyebrow">CAREER CHRONOLOGY</div>
       <h1 className="mt-3 text-4xl font-bold md:text-6xl">Twenty-eight years, fourteen roles.</h1>
       <p className="mx-auto mt-5 max-w-3xl leading-relaxed text-text-muted">
-        A chronological view of Dr. Sunil Kumar Dhal's academic appointments, department leadership, quality assurance work, research development roles, and current MBA program leadership.
+        A chronological view of Dr. Sunil Kumar Dhal's academic appointments, department leadership, quality assurance
+        work, research development roles, and current MBA program leadership.
       </p>
     </div>
 
@@ -54,7 +64,9 @@ const Experience = () => (
               </div>
             </div>
             <div className="card-hairline bg-card p-6 md:p-8 hover-lift">
-              <div className="text-[10px] font-mono-num uppercase tracking-wider text-gold">{phaseForRange(e.range)}</div>
+              <div className="text-[10px] font-mono-num uppercase tracking-wider text-gold">
+                {phaseForRange(e.range)}
+              </div>
               <h2 className="mt-3 text-2xl font-semibold leading-snug text-text md:text-3xl">{e.role}</h2>
               <p className="mt-2 text-lg text-text-muted">{e.inst}</p>
               <p className="mt-5 max-w-4xl leading-relaxed text-text-muted">{detailForRole(e.role)}</p>

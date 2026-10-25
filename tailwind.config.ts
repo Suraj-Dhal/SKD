@@ -9,9 +9,9 @@ export default {
     container: { center: true, padding: "2rem", screens: { "2xl": "1280px" } },
     extend: {
       fontFamily: {
-        sans: ['Manrope', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-        serif: ['Instrument Serif', 'serif'],
+        sans: ["Manrope", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+        serif: ["Instrument Serif", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -53,7 +53,10 @@ export default {
       keyframes: {
         "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
         "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
-        "fade-up": { "0%": { opacity: "0", transform: "translateY(24px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(24px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

@@ -15,7 +15,17 @@ interface Props {
   accent?: React.ReactNode;
 }
 
-export const Counter = ({ value, label, suffix, prefix, source, sourceHref, separator, size = "default", accent }: Props) => {
+export const Counter = ({
+  value,
+  label,
+  suffix,
+  prefix,
+  source,
+  sourceHref,
+  separator,
+  size = "default",
+  accent,
+}: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
   const [done, setDone] = useState(false);
@@ -47,12 +57,20 @@ export const Counter = ({ value, label, suffix, prefix, source, sourceHref, sepa
       </div>
       <div className="mt-4 text-[11px] tracking-[0.15em] uppercase text-text-muted font-mono-num">{label}</div>
       {source && sourceHref?.startsWith("/") && (
-        <Link to={sourceHref} className="mt-2 inline-block text-[10px] text-text-faint font-mono-num hover:text-blue-deep hover:underline">
+        <Link
+          to={sourceHref}
+          className="mt-2 inline-block text-[10px] text-text-faint font-mono-num hover:text-blue-deep hover:underline"
+        >
           {source}
         </Link>
       )}
       {source && sourceHref && !sourceHref.startsWith("/") && (
-        <a href={sourceHref} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-[10px] text-text-faint font-mono-num hover:text-blue-deep hover:underline">
+        <a
+          href={sourceHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-block text-[10px] text-text-faint font-mono-num hover:text-blue-deep hover:underline"
+        >
           {source}
         </a>
       )}

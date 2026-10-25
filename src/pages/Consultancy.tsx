@@ -7,7 +7,20 @@ import { consultancy } from "@/data/site";
 const baseYear = 2011;
 const totalMonths = 48;
 const startMonth = (s: string) => {
-  const m: Record<string, number> = { January:0, February:1, March:2, April:3, May:4, June:5, July:6, August:7, September:8, October:9, November:10, December:11 };
+  const m: Record<string, number> = {
+    January: 0,
+    February: 1,
+    March: 2,
+    April: 3,
+    May: 4,
+    June: 5,
+    July: 6,
+    August: 7,
+    September: 8,
+    October: 9,
+    November: 10,
+    December: 11,
+  };
   const parts = s.split(" ");
   return (parseInt(parts[2]) - baseYear) * 12 + m[parts[1]];
 };
@@ -19,7 +32,9 @@ const Consultancy = () => (
 
     <motion.div {...fadeUp} className="mt-10 card-hairline bg-card p-6 overflow-hidden">
       <div className="flex justify-between font-mono-num text-xs text-text-faint mb-3">
-        {[2011, 2012, 2013, 2014, 2015].map(y => <span key={y}>{y}</span>)}
+        {[2011, 2012, 2013, 2014, 2015].map((y) => (
+          <span key={y}>{y}</span>
+        ))}
       </div>
       <div className="space-y-3">
         {consultancy.map((p, i) => {
@@ -45,7 +60,9 @@ const Consultancy = () => (
     </motion.div>
 
     <p className="mt-10 max-w-3xl text-text-muted leading-relaxed">
-      Beyond academia, Dr. Dhal has led five field-research consultancy projects spanning corporate social responsibility, rural infrastructure impact, and elementary education quality. Clients include Power Grid Corporation of India and the Government of Odisha.
+      Beyond academia, Dr. Dhal has led five field-research consultancy projects spanning corporate social
+      responsibility, rural infrastructure impact, and elementary education quality. Clients include Power Grid
+      Corporation of India and the Government of Odisha.
     </p>
 
     {consultancy.map((p, i) => (
@@ -61,7 +78,9 @@ const Consultancy = () => (
           { year: `${p.duration}M`, label: "Research duration", detail: "Field assessment and reporting" },
         ]}
       >
-        <p><span className="font-mono-num text-text">{p.duration} months</span> · started {p.start}</p>
+        <p>
+          <span className="font-mono-num text-text">{p.duration} months</span> · started {p.start}
+        </p>
         <p>{p.body}</p>
       </TimelineTextBlock>
     ))}

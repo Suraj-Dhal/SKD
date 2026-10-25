@@ -13,10 +13,12 @@ const Awards = () => (
       <div className="eyebrow">RECOGNITION</div>
       <h1 className="mt-3 text-4xl md:text-6xl font-bold">Five awards, four years.</h1>
       <div className="mt-10 flex items-center gap-3">
-        {years.map(y => (
+        {years.map((y) => (
           <div key={y} className="flex flex-col items-center gap-2">
             <div className="flex gap-1">
-              {Array.from({ length: cluster[y] || 0 }).map((_, i) => <div key={i} className="w-2.5 h-2.5 rounded-full bg-gold" />)}
+              {Array.from({ length: cluster[y] || 0 }).map((_, i) => (
+                <div key={i} className="w-2.5 h-2.5 rounded-full bg-gold" />
+              ))}
               {!cluster[y] && <div className="w-2.5 h-2.5 rounded-full bg-surface-2" />}
             </div>
             <div className="font-mono-num text-xs text-text-faint">{y}</div>
