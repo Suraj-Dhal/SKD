@@ -2,6 +2,8 @@ import { useMemo, useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { geoMercator, geoPath } from "d3-geo";
 import { feature, mesh } from "topojson-client";
+import type { GeometryCollection, Topology } from "topojson-specification";
+import type { FeatureCollection, Geometry } from "geojson";
 import world from "world-atlas/countries-50m.json";
 import indiaStates from "@/assets/india-states-official.json";
 import { fadeUp } from "@/constants/motion";
@@ -71,22 +73,28 @@ const remainingKashmirLineCover: Array<[number, number]> = [
   [76.34, 34.74],
 ];
 
+type WorldTopology = Topology<{ countries: GeometryCollection<{ name: string }> }>;
+type IndiaStatesTopology = Topology<{ data: GeometryCollection<{ NAME_1: string }> }>;
+
+const worldTopology = world as unknown as WorldTopology;
+const indiaTopology = indiaStates as unknown as IndiaStatesTopology;
+
 const SpeakingMap = () => {
   const [active, setActive] = useState<string | null>("Bhubaneswar");
   const width = 980;
   const height = 680;
 
   const { countryPaths, statePaths, internalBoundaryPath, indiaOutlinePath, guidePaths, markerPoints } = useMemo(() => {
-    const countries = feature(world as any, (world as any).objects.countries) as any;
-    const india = feature(indiaStates as any, (indiaStates as any).objects.data) as any;
-    const indiaInternalBoundaries = mesh(indiaStates as any, (indiaStates as any).objects.data, (a, b) => a !== b) as any;
-    const indiaExteriorBoundary = mesh(indiaStates as any, (indiaStates as any).objects.data, (a, b) => a === b) as any;
-    const subcontinentFeatures = countries.features.filter((d: any) => contextCountries.has(d.properties.name));
-    const focusFeatureCollection = {
+    const countries = feature(worldTopology, worldTopology.objects.countries);
+    const india = feature(indiaTopology, indiaTopology.objects.data);
+    const indiaInternalBoundaries = mesh(indiaTopology, indiaTopology.objects.data, (a, b) => a !== b);
+    const indiaExteriorBoundary = mesh(indiaTopology, indiaTopology.objects.data, (a, b) => a === b);
+    const subcontinentFeatures = countries.features.filter((d) => contextCountries.has(d.properties.name));
+    const focusFeatureCollection: FeatureCollection<Geometry> = {
       type: "FeatureCollection",
-      features: [...subcontinentFeatures.filter((d: any) => d.properties.name !== "India"), ...india.features],
+      features: [...subcontinentFeatures.filter((d) => d.properties.name !== "India"), ...india.features],
     };
-    const projection = geoMercator().fitExtent([[64, 54], [916, 620]], focusFeatureCollection as any);
+    const projection = geoMercator().fitExtent([[64, 54], [916, 620]], focusFeatureCollection);
     const path = geoPath(projection);
     const pointsToPath = (points: Array<[number, number]>) =>
       points
@@ -99,11 +107,11 @@ const SpeakingMap = () => {
         .join(" ");
 
     return {
-      countryPaths: subcontinentFeatures.map((country: any) => ({
+      countryPaths: subcontinentFeatures.map((country) => ({
         name: country.properties.name,
         d: path(country) ?? "",
       })),
-      statePaths: india.features.map((state: any) => ({
+      statePaths: india.features.map((state) => ({
         name: state.properties.NAME_1,
         d: path(state) ?? "",
       })),
