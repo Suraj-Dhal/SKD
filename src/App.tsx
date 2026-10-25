@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
@@ -12,10 +13,12 @@ import Books from "./pages/Books";
 import Awards from "./pages/Awards";
 import Scholars from "./pages/Scholars";
 import Editorial from "./pages/Editorial";
-import Speaking from "./pages/Speaking";
 import Consultancy from "./pages/Consultancy";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+
+// The Speaking map bundles world and India TopoJSON (~1 MB), so load it on demand.
+const Speaking = lazy(() => import("./pages/Speaking"));
 
 const App = () => (
   <TooltipProvider>
@@ -37,7 +40,14 @@ const App = () => (
           <Route path="/publications/research" element={<Publications />} />
           <Route path="/publications/books" element={<Books />} />
           <Route path="/publications/scholars" element={<Scholars />} />
-          <Route path="/speaking" element={<Speaking />} />
+          <Route
+            path="/speaking"
+            element={
+              <Suspense fallback={null}>
+                <Speaking />
+              </Suspense>
+            }
+          />
           <Route path="/contact" element={<Contact />} />
           <Route path="/speaking/talks" element={<Navigate to="/speaking" replace />} />
           <Route path="/speaking/media-events" element={<Navigate to="/speaking" replace />} />
